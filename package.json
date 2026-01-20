@@ -1,0 +1,45 @@
+{
+  "name": "backend-boilerplate",
+  "version": "0.1.0",
+  "description": "backend-boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node --import tsx dist/index.js",
+    "dev": "tsx watch src/index.ts",
+    "prettier": "prettier . --write",
+    "lint": "eslint . --fix",
+    "format": "pnpm prettier && pnpm lint"
+  },
+  "keywords": [
+    "boilerplate",
+    "initial-project",
+    "backend",
+    "api-rest",
+    "restful",
+    "express",
+    "node",
+    "typescript"
+  ],
+  "author": "Hector Lozano",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "cors": "2.8.5",
+    "dotenv": "17.2.3",
+    "express": "5.2.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.39.2",
+    "@types/cors": "2.8.19",
+    "@types/express": "5.0.6",
+    "@types/node": "25.0.9",
+    "eslint": "9.39.2",
+    "globals": "17.0.0",
+    "jiti": "2.6.1",
+    "prettier": "3.8.0",
+    "tsx": "4.21.0",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.53.1"
+  }
+}
