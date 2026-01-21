@@ -1,5 +1,4 @@
 import http from 'node:http'
-import 'dotenv/config'
 import app from './app'
 import { env } from './config/env'
 import { logger } from './config/logger'

@@ -1,3 +1,5 @@
+import 'dotenv/config'
+
 export const env = () => {
   const env = process.env
   return {
