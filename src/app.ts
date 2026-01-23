@@ -1,7 +1,7 @@
 import express, { type Request, type Response, type NextFunction } from 'express'
 import cors from 'cors'
 import createError from 'http-errors'
-import { pinoLogger } from './config/logger'
+import { pinoLogger } from '@/config/logger'
 
 const app: express.Application = express()
 
