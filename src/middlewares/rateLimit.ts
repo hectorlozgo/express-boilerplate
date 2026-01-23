@@ -1,10 +1,12 @@
 import rateLimit from 'express-rate-limit'
 import type { Request, Response } from 'express'
 import { logger } from '@config/logger'
+import { env } from '@config/env'
 
+const isDev = env.NODE_ENV !== 'production'
 export const limiter = rateLimit({
   windowMs: 15 * 60 * 1000,
-  limit: 5,
+  limit: isDev ? 5 : 150,
   handler: async (req: Request, res: Response, _next) => {
     const now = new Date()
     const date = now.toLocaleDateString('es-ES', {
