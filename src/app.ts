@@ -1,14 +1,15 @@
 import express, { type Request, type Response, type NextFunction } from 'express'
+import helmet from 'helmet'
 import cors from 'cors'
 import createError from 'http-errors'
 import { pinoLogger } from '@/config/logger'
 
 const app: express.Application = express()
 
-app.use(pinoLogger)
+app.use(helmet())
 app.use(cors())
-app.use(express.json())
-app.disable('x-powered-by')
+app.use(pinoLogger)
+app.use(express.json({ limit: '15kb' }))
 
 // not found
 app.use((_req: Request, _res: Response, next: NextFunction) => {
