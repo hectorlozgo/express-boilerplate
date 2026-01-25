@@ -11,7 +11,7 @@ const config: Config = {
   transform: {
     ...tsJestTransformCfg
   },
-  testMatch: ['**/test/**/*.test.ts', '**/test/**/*.spec.ts'],
+  testMatch: ['**/*.test.ts', '**/*.spec.ts'],
   moduleFileExtensions: ['ts', 'js', 'json', 'node']
 }
 

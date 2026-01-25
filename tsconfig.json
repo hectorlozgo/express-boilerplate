@@ -30,6 +30,6 @@
       "@/*": ["src/*"]
     }
   },
-  "include": ["src/**/*", "test"],
+  "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"]
 }
