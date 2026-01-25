@@ -15,7 +15,7 @@
     "allowImportingTsExtensions": false,
     "allowSyntheticDefaultImports": true,
     "isolatedModules": true,
-    "types": ["node"],
+    "types": ["node", "jest"],
 
     "strict": true,
     "esModuleInterop": true,
@@ -27,9 +27,9 @@
 
     "baseUrl": ".",
     "paths": {
-      "@*": ["src/*"]
+      "@/*": ["src/*"]
     }
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "test"],
   "exclude": ["node_modules", "dist"]
 }

@@ -3,7 +3,7 @@ import helmet from 'helmet'
 import cors from 'cors'
 import createError from 'http-errors'
 import { pinoLogger } from '@/config/logger'
-import { limiter } from '@middlewares/rateLimit'
+import { limiter } from '@/middlewares/rateLimit'
 
 const app: express.Application = express()
 

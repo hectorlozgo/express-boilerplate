@@ -1,7 +1,7 @@
 import rateLimit from 'express-rate-limit'
 import type { Request, Response } from 'express'
-import { logger } from '@config/logger'
-import { env } from '@config/env'
+import { logger } from '@/config/logger'
+import { env } from '@/config/env'
 
 const isDev = env.NODE_ENV !== 'production'
 export const limiter = rateLimit({
