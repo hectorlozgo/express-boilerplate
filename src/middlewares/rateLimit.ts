@@ -1,6 +1,6 @@
 import rateLimit from 'express-rate-limit'
 import type { Request, Response } from 'express'
-import { logger } from '@/config/logger'
+import { logger } from '@/middlewares/logger'
 import { env } from '@/config/env'
 
 const isDev = env.NODE_ENV !== 'production'

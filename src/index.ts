@@ -1,7 +1,7 @@
 import http from 'node:http'
 import app from '@/app'
 import { env } from '@/config/env'
-import { logger } from '@/config/logger'
+import { logger } from '@/middlewares/logger'
 
 const server = http.createServer(app)
 

@@ -1,7 +1,7 @@
 import express from 'express'
 import helmet from 'helmet'
 import cors from 'cors'
-import { pinoLogger } from '@/config/logger'
+import { pinoLogger } from '@/middlewares/logger'
 import { limiter } from '@/middlewares/rateLimit'
 import { ErrorHandler } from './middlewares/errorHandler'
 

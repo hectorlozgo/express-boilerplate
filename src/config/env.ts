@@ -1,6 +1,6 @@
 import 'dotenv/config'
 import { z } from 'zod'
-import { logger } from './logger'
+import { logger } from '@/middlewares/logger'
 
 const envSchema = z.object({
   NODE_ENV: z.enum(['development', 'production']).default('production'),
