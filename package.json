@@ -27,16 +27,6 @@
   "author": "Hector Lozano",
   "license": "ISC",
   "type": "module",
-  "overrides": {
-    "glob": "10.3.10",
-    "inflight": "npm:@aashutoshrathi/inflight@1.0.1"
-  },
-  "pnpm": {
-    "overrides": {
-      "glob": "10.3.10",
-      "inflight": "npm:@aashutoshrathi/inflight@1.0.1"
-    }
-  },
   "dependencies": {
     "cors": "2.8.6",
     "dotenv": "17.2.3",
