@@ -6,13 +6,13 @@ Un boilerplate inicial para construir **APIs RESTful** con **Node.js**, **Expres
 
 ## Tecnologías principales
 
-- [**Node.js**](https://nodejs.org/en/) y [**Express**](https://expressjs.com/) para el servidor.
-- [**TypeScript**](https://www.typescriptlang.org/) para tipado estático y mayor seguridad.
-- [**Zod**](https://zod.dev/) para validación de datos.
-- [**Pino**](https://getpino.io/) para logging eficiente.
-- [**Helmet**](https://helmetjs.github.io/) y [**cors**](https://www.npmjs.com/package/cors) para seguridad y manejo de CORS.
-- [**Express Rate Limit**](https://www.npmjs.com/package/express-rate-limit) para limitar peticiones y proteger tu API.
-- [**Jest**](https://jestjs.io/) + [**Supertest**](https://www.npmjs.com/package/supertest) para testing.
+- <a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a> y <a href="https://expressjs.com/" target="_blank" rel="noopener">Express</a> para el servidor.
+- <a href="https://www.typescriptlang.org/" target="_blank" rel="noopener">TypeScript</a> para tipado estático y mayor seguridad.
+- <a href="https://zod.dev/" target="_blank" rel="noopener">Zod</a> para validación de datos.
+- <a href="https://getpino.io/" target="_blank" rel="noopener">Pino</a> para logging eficiente.
+- <a href="https://helmetjs.github.io/" target="_blank" rel="noopener">Helmet</a> y <a href="https://www.npmjs.com/package/cors" target="_blank" rel="noopener">cors</a> para seguridad y manejo de CORS.
+- <a href="https://www.npmjs.com/package/express-rate-limit" target="_blank" rel="noopener">Express Rate Limit</a> para limitar peticiones y proteger la API.
+- <a href="https://jestjs.io/" target="_blank" rel="noopener">Jest</a> + <a href="https://www.npmjs.com/package/supertest" target="_blank" rel="noopener">Supertest</a> para testing.
 
 ---
 
@@ -20,9 +20,10 @@ Un boilerplate inicial para construir **APIs RESTful** con **Node.js**, **Expres
 
 - Estructura modular lista para crecer.
 - Scripts para desarrollo, producción, testing y limpieza.
-- Integración de [**Prettier**](https://prettier.io/) y [**ESLint**](https://eslint.org/) para mantener el código limpio.
-- [**Husky**](https://typicode.github.io/husky/#/) + [**Commitlint**](https://commitlint.js.org/) para commits estandarizados.
-- Configuración de pruebas con cobertura incluida.
+- Integración de <a href="https://prettier.io/" target="_blank" rel="noopener">Prettier</a> y <a href="https://eslint.org/" target="_blank" rel="noopener">ESLint</a> para mantener el código limpio.
+- <a href="https://typicode.github.io/husky/#/" target="_blank" rel="noopener">Husky</a> + <a href="https://commitlint.js.org/" target="_blank" rel="noopener">Commitlint</a> para commits estandarizados.
+- Uso de <a href="https://github.com/okonet/lint-staged" target="_blank" rel="noopener">Lint-staged</a> para ejecutar linters únicamente en los archivos modificados antes de cada commit.
+- Configuración de tests con cobertura incluida.
 
 ---
 
