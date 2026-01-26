@@ -4,7 +4,7 @@ Un boilerplate inicial para construir **APIs RESTful** con **Node.js**, **Expres
 
 ---
 
-## 📦 Tecnologías principales
+## Tecnologías principales
 
 - [**Node.js**](https://nodejs.org/en/) y [**Express**](https://expressjs.com/) para el servidor.
 - [**TypeScript**](https://www.typescriptlang.org/) para tipado estático y mayor seguridad.
@@ -16,7 +16,7 @@ Un boilerplate inicial para construir **APIs RESTful** con **Node.js**, **Expres
 
 ---
 
-## ⚡ Características
+## Características
 
 - Estructura modular lista para crecer.
 - Scripts para desarrollo, producción, testing y limpieza.
@@ -26,7 +26,7 @@ Un boilerplate inicial para construir **APIs RESTful** con **Node.js**, **Expres
 
 ---
 
-## 🚀 Instalación
+## Instalación
 
 Clona el repositorio:
 
@@ -55,7 +55,7 @@ Renombrar fichero .env.example a .env y usar configurar las variables de entorno
 
 ---
 
-## 🏃‍♂️ Scripts disponibles
+## Scripts disponibles
 
 | Script                  | Descripción                                                             |
 | ----------------------- | ----------------------------------------------------------------------- |
@@ -70,7 +70,7 @@ Renombrar fichero .env.example a .env y usar configurar las variables de entorno
 | `npm run clean`         | Elimina carpetas `dist/` y `coverage/` para limpiar el proyecto.        |
 | **_`npm run prepare`_** | Prepara Husky y los hooks de Git.**(Usarlo después de Initial commit)** |
 
-## 📝 Commitlint y Husky
+## Commitlint y Husky
 
 - Configuración lista para asegurar commits con mensajes convencionales.
 - Husky activa hooks de pre-commit automáticamente.
