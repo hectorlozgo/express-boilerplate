@@ -1,6 +1,7 @@
 import 'dotenv/config'
 import { z } from 'zod'
 import { logger } from '@/middlewares/logger'
+import { ValidationError } from '@/validators/validationError'
 
 const envSchema = z.object({
   NODE_ENV: z.enum(['development', 'production']).default('production'),
@@ -10,8 +11,9 @@ const envSchema = z.object({
 const result = envSchema.safeParse(process.env)
 
 if (!result.success) {
-  const errorMessage = result.error.issues.map((issue) => `${issue.path.join('.')}: ${issue.message}`).join(', ')
-  logger.error(`Invalid environment variables: ${errorMessage}`)
+  const error = new ValidationError(result.error, 'env')
+  const details = error.errors.map((err) => `${err.location}${err.field ? `.${err.field}` : ''}: ${err.msg}`).join(', ')
+  logger.error(`Invalid environment variables: ${details}`)
   process.exit(1)
 }
 
