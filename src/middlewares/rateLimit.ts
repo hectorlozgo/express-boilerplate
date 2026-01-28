@@ -1,9 +1,9 @@
 import rateLimit from 'express-rate-limit'
 import type { Request, Response } from 'express'
 import { logger } from '@/middlewares/logger'
-import { env } from '@/config/env'
+import { envs } from '@/config/env'
 
-const isDev = env.NODE_ENV !== 'production'
+const isDev = envs.NODE_ENV !== 'production'
 export const limiter = rateLimit({
   windowMs: 15 * 60 * 1000,
   limit: isDev ? 5 : 150,

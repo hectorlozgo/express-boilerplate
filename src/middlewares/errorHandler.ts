@@ -1,6 +1,6 @@
 import type { Request, Response, NextFunction } from 'express'
 import createError, { isHttpError, type HttpError } from 'http-errors'
-import { env } from '@/config/env'
+import { envs } from '@/config/env'
 import { ValidationError } from '@/validators/validationError'
 import type { ApiErrorResponse, ApiValidationErrorResponse, ApiGenericErrorResponse } from '@/interfaces/apiResponse'
 import { logger } from './logger'
@@ -51,7 +51,7 @@ export class ErrorHandler {
     const response: ApiGenericErrorResponse = {
       status: 500,
       message: 'Internal Server Error',
-      ...(env.NODE_ENV !== 'production' && { details: err.message, stack: err.stack })
+      ...(envs.NODE_ENV !== 'production' && { details: err.message, stack: err.stack })
     }
     sendJson(res, 500, response)
   }
