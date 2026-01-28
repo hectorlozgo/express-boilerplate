@@ -1,11 +1,5 @@
 import type { z } from 'zod'
-
-interface ApiValidationError {
-  msg: string
-  field?: string
-  type: string
-  location: string
-}
+import type { ApiValidationError } from '@/interfaces/apiResponse'
 
 export class ValidationError extends Error {
   public readonly status: number = 400
