@@ -56,6 +56,27 @@ Renombrar fichero .env.example a .env y usar configurar las variables de entorno
 
 ---
 
+## Inicializar con Docker
+
+Docker visualizar docker en consola:
+
+```bash
+docker-compose up --build
+```
+
+Docker en modo detachment:
+
+```bash
+docker-compose up --build -d
+```
+
+Construir imagen de Docker
+
+```bash
+docker build -t 'image-name' .
+docker run 'image-name'
+```
+
 ## Scripts disponibles
 
 | Script                  | Descripción                                                             |
