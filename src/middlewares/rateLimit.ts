@@ -2,30 +2,28 @@ import rateLimit from 'express-rate-limit'
 import type { Request, Response } from 'express'
 import { logger } from '@/middlewares/logger'
 import { envs } from '@/config/env'
+import { persistLog } from '@/utils/logs'
+import { getTimestamp } from '@/utils/timestamp'
 
 const isDev = envs.NODE_ENV !== 'production'
 export const limiter = rateLimit({
   windowMs: 15 * 60 * 1000,
   limit: isDev ? 5 : 150,
-  handler: async (req: Request, res: Response, _next) => {
-    const now = new Date()
-    const date = now.toLocaleDateString('es-ES', {
-      day: '2-digit',
-      month: '2-digit',
-      year: 'numeric'
-    })
+  handler: (req: Request, res: Response, _next) => {
+    const { date, time } = getTimestamp()
 
-    const time = now.toLocaleTimeString('es-ES', {
-      hour: '2-digit',
-      minute: '2-digit',
-      second: '2-digit',
-      hour12: false
-    })
     const ip = req.ip === '::1' ? 'localhost' : req.ip
     const method = req.method
     const url = req.originalUrl
-    const message = `Rate limit exceeded: [IP]: ${ip} [METHOD]: ${method} [URL]: ${url} DATE: ${date} - ${time}`
+    const message = `Rate limit exceeded: [IP]: ${ip} [METHOD]: ${method} [URL]: ${url}`
     logger.error(message)
+    persistLog('rate-limit', {
+      timestamp: `${date} ${time}`,
+      level: 'error',
+      message
+    }).catch((err) => {
+      logger.error('Error writing log', err)
+    })
 
     res.status(429).json({
       status: 'error',

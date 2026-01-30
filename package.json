@@ -13,7 +13,8 @@
     "prepare": "husky",
     "test": "jest",
     "coverage": "jest --coverage",
-    "clean": "rimraf dist coverage"
+    "clean": "rimraf dist coverage",
+    "clean:logs": "rimraf logs"
   },
   "keywords": [
     "boilerplate",

@@ -90,6 +90,7 @@ docker run 'image-name'
 | `npm run lint`          | Aplica ESLint para corregir errores de estilo automáticamente.          |
 | `npm run format`        | Aplica Prettier y ESLint en conjunto.                                   |
 | `npm run clean`         | Elimina carpetas `dist/` y `coverage/` para limpiar el proyecto.        |
+| `npm run clean:logs`    | Elimina carpeta `logs/` recursivamente.                                 |
 | **_`npm run prepare`_** | Prepara Husky y los hooks de Git.**(Usarlo después de Initial commit)** |
 
 ## Commitlint y Husky
