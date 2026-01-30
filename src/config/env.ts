@@ -4,7 +4,7 @@ import { logger } from '@/middlewares/logger'
 import { ValidationError } from '@/validators/validationError'
 
 const envSchema = z.object({
-  NODE_ENV: z.enum(['development', 'production']).default('production'),
+  NODE_ENV: z.enum(['development', 'production', 'test']).default('production'),
   PORT: z.coerce.number().default(3000)
 })
 
